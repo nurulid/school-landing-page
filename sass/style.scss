@@ -1,18 +1,27 @@
 $main-color: #ec6955;
 $kuning : #feeb81;
+$hitam : #000;
+$putih: #fff;
 
 @mixin button{
     padding: 20px 25px;
+    margin: 15px 5px;
     color: $main-color;
     background: $kuning;
     border-radius: 7px;
-    box-shadow: 2px 5px 15px #333;
+    box-shadow: 2px 3px 10px #333;
     border: none;
     font-weight: bold;
     cursor: pointer;
     &:hover{
         box-shadow: none;
     }
+}
+
+@mixin clearfix{
+    content: "";
+    display: block;
+    clear: both;
 }
 
 // GLOBAL
@@ -38,7 +47,7 @@ a{
             float: left;
             width: (100%/5);
             a{
-                color: #000;
+                color: $hitam;
                 padding: 20px 5px 16px;
                 &:hover{
                     color: $main-color;
@@ -55,7 +64,7 @@ a{
     min-height: 767px;
     background-size: cover;
     text-align: center;
-    color: #fff;
+    color: $putih;
     #desc{
         width: 50%;
         margin: 200px auto 30px auto;
@@ -78,7 +87,7 @@ a{
             margin: 15px 5px;
             border: none;
             border-radius: 7px;
-            color: #fff;
+            color: $putih;
             &:focus{
                 outline: 0 none;
             }
@@ -86,5 +95,19 @@ a{
         .bsend{
             @include button;
         }
+    }
+}
+
+// WHO WE ARE
+#who{
+    background: url(../img/who-we-are-bg.jpg)no-repeat center center;
+    min-height: 667px;
+    background-size: cover;
+    .wrapper{
+        width: 46%;
+        float: left;
+        margin: 0 0 0 95px;
+        margin-top: 210px;
+        margin-bottom: 50px;
     }
 }

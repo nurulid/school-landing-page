@@ -68,16 +68,30 @@ a {
 }
 #banner #pencarian .bsend {
   padding: 20px 25px;
+  margin: 15px 5px;
   color: #ec6955;
   background: #feeb81;
   border-radius: 7px;
-  box-shadow: 2px 5px 15px #333;
+  box-shadow: 2px 3px 10px #333;
   border: none;
   font-weight: bold;
   cursor: pointer;
 }
 #banner #pencarian .bsend:hover {
   box-shadow: none;
+}
+
+#who {
+  background: url(../img/who-we-are-bg.jpg) no-repeat center center;
+  min-height: 667px;
+  background-size: cover;
+}
+#who .wrapper {
+  width: 46%;
+  float: left;
+  margin: 0 0 0 95px;
+  margin-top: 210px;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
