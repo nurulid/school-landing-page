@@ -9,13 +9,19 @@ $putih: #fff;
     color: $main-color;
     background: $kuning;
     border-radius: 7px;
-    box-shadow: 2px 3px 10px #333;
     border: none;
     font-weight: bold;
     cursor: pointer;
     &:hover{
         box-shadow: none;
+        background: darken($kuning, 8);
     }
+}
+
+@mixin judul{
+    text-align: center;
+    color: $putih;
+    margin-bottom: 50px;
 }
 
 @mixin clearfix{
@@ -106,8 +112,77 @@ a{
     .wrapper{
         width: 46%;
         float: left;
-        margin: 0 0 0 95px;
-        margin-top: 210px;
-        margin-bottom: 50px;
+        margin: 210px 0 50px 95px;
     }
+}
+
+// OUR CATEGORY
+#category{
+    background: url(../img/our-category-bg.jpg)no-repeat center;
+    min-height: 960px;
+    padding-top: 100px;
+    background-size: cover;
+    &:after{
+        @include clearfix;
+    }
+    .judul{
+        @include judul;
+    }
+    #category-list ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: $putih;
+        border-radius: 7px;
+        li{
+            flex: 0 1 (100%/3);
+            box-sizing: border-box;
+            padding: 40px 20px 40px 30px;
+            &:hover{
+                color: $main-color;
+            }
+            &:hover img{
+                animation: berputar 1s ease;
+            }
+            &:nth-child(1), &:nth-child(2), &:nth-child(4),
+            &:nth-child(5){
+                border-right: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+            }
+            &:nth-child(3), &:nth-child(6){
+                border-bottom: 1px solid #ddd;
+            }
+            &:nth-child(7), &:nth-child(8){
+                border-right: 1px solid #ddd;
+            }
+        }
+        img{
+            width: 60px;
+            &[alt="Ios Mas Originales Icon"]{
+                position: relative;
+                top: -30px;
+            }
+        }
+        .desc{
+            display: inline-block;
+            margin-left: 15px;
+            box-sizing: border-box;
+            p{
+                width: 250px;
+            }
+        }
+    }
+    .bsend{
+        @include button;
+        margin: 50px 0;
+        &:hover{
+            animation: berputar 0.5s ease;
+        }
+    }
+}
+
+
+// ANIMATION
+@keyframes berputar{
+    0%{transform: rotateY(360deg)}
 }

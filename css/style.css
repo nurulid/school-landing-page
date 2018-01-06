@@ -72,13 +72,13 @@ a {
   color: #ec6955;
   background: #feeb81;
   border-radius: 7px;
-  box-shadow: 2px 3px 10px #333;
   border: none;
   font-weight: bold;
   cursor: pointer;
 }
 #banner #pencarian .bsend:hover {
   box-shadow: none;
+  background: #fee559;
 }
 
 #who {
@@ -89,9 +89,91 @@ a {
 #who .wrapper {
   width: 46%;
   float: left;
-  margin: 0 0 0 95px;
-  margin-top: 210px;
+  margin: 210px 0 50px 95px;
+}
+
+#category {
+  background: url(../img/our-category-bg.jpg) no-repeat center;
+  min-height: 960px;
+  padding-top: 100px;
+  background-size: cover;
+}
+#category:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#category .judul {
+  text-align: center;
+  color: #fff;
   margin-bottom: 50px;
+}
+#category #category-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #fff;
+  border-radius: 7px;
+}
+#category #category-list ul li {
+  flex: 0 1 33.33333%;
+  box-sizing: border-box;
+  padding: 40px 20px 40px 30px;
+}
+#category #category-list ul li:hover {
+  color: #ec6955;
+}
+#category #category-list ul li:hover img {
+  animation: berputar 1s ease;
+}
+#category #category-list ul li:nth-child(1), #category #category-list ul li:nth-child(2), #category #category-list ul li:nth-child(4), #category #category-list ul li:nth-child(5) {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+#category #category-list ul li:nth-child(3), #category #category-list ul li:nth-child(6) {
+  border-bottom: 1px solid #ddd;
+}
+#category #category-list ul li:nth-child(7), #category #category-list ul li:nth-child(8) {
+  border-right: 1px solid #ddd;
+}
+#category #category-list ul img {
+  width: 60px;
+}
+#category #category-list ul img[alt="Ios Mas Originales Icon"] {
+  position: relative;
+  top: -30px;
+}
+#category #category-list ul .desc {
+  display: inline-block;
+  margin-left: 15px;
+  box-sizing: border-box;
+}
+#category #category-list ul .desc p {
+  width: 250px;
+}
+#category .bsend {
+  padding: 20px 25px;
+  margin: 15px 5px;
+  color: #ec6955;
+  background: #feeb81;
+  border-radius: 7px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 50px 0;
+}
+#category .bsend:hover {
+  box-shadow: none;
+  background: #fee559;
+}
+#category .bsend:hover {
+  animation: berputar 0.5s ease;
+}
+
+@keyframes berputar {
+  0% {
+    transform: rotateY(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
