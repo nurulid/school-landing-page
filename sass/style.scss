@@ -80,6 +80,14 @@ a{
     background: url(../img/who-we-are-bg.jpg)no-repeat center center;
     min-height: 667px;
     background-size: cover;
+    .wrapper{
+        position: relative;
+        top: 200px;
+        left: 40px;
+    }
+    p{
+        width: 45%;
+    }
 }
 
 // OUR CATEGORY
