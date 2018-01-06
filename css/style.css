@@ -199,6 +199,9 @@ a {
 #blogs #blog-list .thumb:hover .desc h3 {
   color: #ec6955;
 }
+#blogs #blog-list .thumb:hover .label {
+  background: #d9388a;
+}
 #blogs #blog-list .gambar {
   height: 200px;
   overflow: hidden;

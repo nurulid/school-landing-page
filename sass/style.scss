@@ -180,6 +180,9 @@ a{
         &:hover .desc h3{
             color: $main-color;
         }
+        &:hover .label{
+            background: lighten(#bf2473, 9);
+        }        
     }
     #blog-list .gambar{
         height: 200px;
