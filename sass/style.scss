@@ -1,34 +1,5 @@
-$main-color: #ec6955;
-$kuning : #feeb81;
-$hitam : #000;
-$putih: #fff;
-
-@mixin button{
-    padding: 20px 25px;
-    margin: 15px 5px;
-    color: $main-color;
-    background: $kuning;
-    border-radius: 7px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    &:hover{
-        box-shadow: none;
-        background: darken($kuning, 8);
-    }
-}
-
-@mixin judul{
-    text-align: center;
-    color: $putih;
-    margin-bottom: 50px;
-}
-
-@mixin clearfix{
-    content: "";
-    display: block;
-    clear: both;
-}
+@import "variable";
+@import "mixin";
 
 // GLOBAL
 a{
@@ -177,6 +148,69 @@ a{
         margin: 50px 0;
         &:hover{
             animation: berputar 0.5s ease;
+        }
+    }
+}
+
+// OUR BLOGS
+#blogs{
+    background: #f5f5f5;
+    padding-top: 100px;
+    min-height: 1050px;
+    margin-bottom: 50px;
+    .judul{
+        @include judul;
+        color: $hitam;
+        margin-bottom: 100px;
+    }
+    #blog-list ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #blog-list li{
+        flex: 0 1 (95%/3);
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    #blog-list .thumb{
+        &:hover .desc{
+            box-shadow: 0px 5px 15px #ddd;
+        }
+        &:hover .desc h3{
+            color: $main-color;
+        }
+    }
+    #blog-list .gambar{
+        height: 200px;
+        overflow: hidden;
+
+    }
+    .label{
+        position: relative;
+        top: -180px;
+        left: 20px;
+        padding: 8px 10px;
+        background: #bf2473;
+        color: $putih;
+        border-radius: 7px;
+    }
+    .desc{
+        background: $putih;
+        width: 249px;
+        padding: 25px 0px 25px 30px;
+        position: relative;
+        top: -25px;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        margin-bottom: 50px;
+        h3{
+            color: $hitam;
+            font-weight: normal;
+            margin-bottom: -10px;
+        }
+        p{
+            color: rgb(129, 129, 129);
         }
     }
 }

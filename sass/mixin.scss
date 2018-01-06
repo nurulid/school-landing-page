@@ -1,0 +1,26 @@
+@mixin button{
+    padding: 20px 25px;
+    margin: 15px 5px;
+    color: $main-color;
+    background: $kuning;
+    border-radius: 7px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover{
+        box-shadow: none;
+        background: darken($kuning, 8);
+    }
+}
+
+@mixin judul{
+    text-align: center;
+    color: $putih;
+    margin-bottom: 50px;
+}
+
+@mixin clearfix{
+    content: "";
+    display: block;
+    clear: both;
+}
