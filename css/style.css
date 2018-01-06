@@ -174,7 +174,6 @@ a {
   background: #f5f5f5;
   padding-top: 100px;
   min-height: 1050px;
-  margin-bottom: 50px;
 }
 #blogs .judul {
   text-align: center;
@@ -233,6 +232,55 @@ a {
 }
 #blogs .desc p {
   color: #818181;
+}
+
+#propose {
+  background: url(../img/what-do-you-propose-bg.jpg) no-repeat center center;
+  min-height: 324px;
+  text-align: center;
+  margin-top: -5px;
+}
+#propose .judul {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  padding-top: 70px;
+}
+#propose .judul h1 {
+  font-size: 35px;
+}
+#propose form {
+  margin-top: 100px;
+}
+#propose form input[type="email"] {
+  padding: 20px 20px;
+  border-radius: 7px;
+  background: #f6bab1;
+  width: 500px;
+  border: none;
+  color: #fff;
+}
+#propose form input[type="email"]:focus {
+  outline: 0 none;
+}
+#propose form input[type="email"]::placeholder {
+  color: #fff;
+}
+#propose form input[type="button"] {
+  padding: 20px 25px;
+  margin: 15px 5px;
+  color: #ec6955;
+  background: #feeb81;
+  border-radius: 7px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+#propose form input[type="button"]:hover {
+  box-shadow: none;
+  background: #fee559;
 }
 
 @keyframes berputar {
