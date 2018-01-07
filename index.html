@@ -17,6 +17,7 @@
                     <h1>Sekolah.com</h1>
                 </div>
                 <nav>
+                    <div id="burger-menu"></div>
                     <ul>
                         <li><a href="#">Inlclo</a></li>
                         <li><a href="#">Quleres?</a></li>
@@ -223,11 +224,11 @@
         <div class="wrapper">
             <div class="judul">
                 <h1>What Do You Propose</h1>
-                <form>
-                    <input type="email" placeholder="Your Email">
-                    <input type="button" class="bsend" value="Send">
-                </form>
             </div>
+            <form>
+                <input type="email" placeholder="Your Email">
+                <input type="button" class="bsend" value="Send">
+            </form>
         </div>
     </section>
 
@@ -252,7 +253,7 @@
                 <li><a href="">LinkedIn</a></li>
             </ul>
             <ul id="category-menu">
-                <li><h2>Contacts</h2></li>
+                <li><h2>Category</h2></li>
                 <li><a href="">Tua</a></li>
                 <li><a href="">Muda</a></li>
                 <li><a href="">Rakyat</a></li>
@@ -270,5 +271,13 @@
         </div>
         <div id="copyright"><p>&copy; 2017 - Ocloparapequez</p></div>
     </footer>
+
+    <script src="script/jquery-3.2.1.js"></script>
+
+    <script>
+        $('#burger-menu').click(function(){
+        $('nav').toggleClass('open');
+    })
+    </script>
 </body>
 </html>

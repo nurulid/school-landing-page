@@ -24,3 +24,10 @@
     display: block;
     clear: both;
 }
+
+// MEDIA QUERY
+@mixin mq($lebar){
+    @media screen and (max-width: $lebar){
+        @content;
+    }
+}

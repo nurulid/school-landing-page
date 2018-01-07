@@ -15,11 +15,11 @@ a {
   font-size: 23px;
 }
 #navbar nav {
-  flex: 0 1 400px;
+  flex: 0 1 500px;
 }
 #navbar nav li {
   float: left;
-  width: 20%;
+  padding-left: 30px;
 }
 #navbar nav li a {
   color: #000;
@@ -29,6 +29,32 @@ a {
   color: #ec6955;
   border-bottom: 5px solid #ec6955;
   transition: 0.1s;
+}
+@media screen and (max-width: 768px) {
+  #navbar nav {
+    flex: 0 1 100%;
+    height: 0;
+  }
+  #navbar nav.open {
+    height: auto;
+  }
+  #navbar nav li {
+    float: none;
+    padding: 5px 0px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  #navbar nav li a {
+    padding: 5px 5px 10px;
+  }
+  #navbar nav #burger-menu {
+    background: url(../img/navicon.png) no-repeat;
+    height: 40px;
+    width: 40px;
+    float: right;
+    margin-top: -35px;
+    cursor: pointer;
+  }
 }
 
 #banner {
@@ -42,12 +68,16 @@ a {
   width: 50%;
   margin: 200px auto 30px auto;
 }
+#banner #desc h1 {
+  line-height: 1em;
+}
 #banner #pencarian {
   background: #ec6955;
   width: 78%;
   margin: 0 auto;
   border-radius: 7px;
   margin-bottom: 100px;
+  padding: 10px 10px;
 }
 #banner #pencarian select {
   -webkit-appearance: none;
@@ -80,6 +110,30 @@ a {
   box-shadow: none;
   background: #fee559;
 }
+@media screen and (max-width: 1024px) {
+  #banner #pencarian select {
+    padding: 20px 50px 20px 15px;
+    margin: 0px 5px;
+  }
+  #banner #pencarian .bsend {
+    margin: 5px 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #banner #desc {
+    width: 100%;
+    margin: 150px auto 30px auto;
+  }
+  #banner #pencarian select, #banner #pencarian .bsend {
+    margin: 5px 5px;
+    width: 30%;
+  }
+}
+@media screen and (max-width: 425px) {
+  #banner #pencarian select, #banner #pencarian .bsend {
+    width: 90%;
+  }
+}
 
 #who {
   background: url(../img/who-we-are-bg.jpg) no-repeat center center;
@@ -94,17 +148,27 @@ a {
 #who p {
   width: 45%;
 }
+@media screen and (max-width: 768px) {
+  #who .wrapper {
+    top: 200px;
+    left: 0px;
+    text-align: center;
+  }
+  #who p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  #who .wrapper {
+    top: 100px;
+  }
+}
 
 #category {
   background: url(../img/our-category-bg.jpg) no-repeat center;
   min-height: 960px;
   padding-top: 100px;
   background-size: cover;
-}
-#category:after {
-  content: "";
-  display: block;
-  clear: both;
 }
 #category .judul {
   text-align: center;
@@ -172,6 +236,43 @@ a {
 #category .bsend:hover {
   animation: berputar 0.5s ease;
 }
+@media screen and (max-width: 1072px) {
+  #category #category-list ul li {
+    border-bottom: 1px solid #ddd !important;
+    flex: 0 1 50%;
+    border-bottom: 1px solid #ddd !important;
+  }
+  #category #category-list ul li:nth-child(1), #category #category-list ul li:nth-child(2), #category #category-list ul li:nth-child(3), #category #category-list ul li:nth-child(4), #category #category-list ul li:nth-child(5), #category #category-list ul li:nth-child(6), #category #category-list ul li:nth-child(7), #category #category-list ul li:nth-child(8), #category #category-list ul li:nth-child(9) {
+    border: none;
+  }
+  #category #category-list ul li:nth-child(even) {
+    border-left: 1px solid #ddd !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #category #category-list ul li {
+    flex: 0 1 100%;
+    text-align: center;
+  }
+  #category #category-list ul li:nth-child(1), #category #category-list ul li:nth-child(2), #category #category-list ul li:nth-child(3), #category #category-list ul li:nth-child(4), #category #category-list ul li:nth-child(5), #category #category-list ul li:nth-child(6), #category #category-list ul li:nth-child(7), #category #category-list ul li:nth-child(8), #category #category-list ul li:nth-child(9) {
+    border: none;
+  }
+}
+@media screen and (max-width: 445px) {
+  #category #category-list ul img {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+  #category #category-list ul img[alt="Ios Mas Originales Icon"] {
+    top: 0px;
+  }
+  #category #category-list ul .desc {
+    margin-left: 0px;
+  }
+  #category #category-list ul .desc p {
+    width: 240px;
+  }
+}
 
 #blogs {
   background: #f5f5f5;
@@ -191,8 +292,8 @@ a {
   justify-content: center;
 }
 #blogs #blog-list li {
-  flex: 0 1 31.66667%;
-  padding: 0 40px;
+  flex: 0 1 33.33333%;
+  padding: 0 35px;
   box-sizing: border-box;
 }
 #blogs #blog-list .thumb:hover .desc {
@@ -236,13 +337,24 @@ a {
 #blogs .desc p {
   color: #818181;
 }
+@media screen and (max-width: 800px) {
+  #blogs #blog-list ul {
+    margin-bottom: 50px;
+  }
+  #blogs #blog-list li {
+    flex: 0 1 50%;
+    padding: 0 20px;
+  }
+  #blogs .desc {
+    margin-bottom: 20px;
+  }
+}
 
 #propose {
   background: url(../img/what-do-you-propose-bg.jpg) no-repeat center center;
   background-size: cover;
   min-height: 324px;
   text-align: center;
-  margin-top: -5px;
 }
 #propose .judul {
   text-align: center;
@@ -254,15 +366,16 @@ a {
 }
 #propose .judul h1 {
   font-size: 35px;
+  line-height: 1em;
 }
 #propose form {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 #propose form input[type="email"] {
-  padding: 20px 20px;
+  padding: 20px 0px 20px 20px;
   border-radius: 7px;
   background: #f6bab1;
-  width: 500px;
+  width: 60%;
   border: none;
   color: #fff;
 }
@@ -281,10 +394,24 @@ a {
   border: none;
   font-weight: bold;
   cursor: pointer;
+  margin-bottom: 50px;
 }
 #propose form input[type="button"]:hover {
   box-shadow: none;
   background: #fee559;
+}
+@media screen and (max-width: 768px) {
+  #propose form input[type="email"] {
+    width: 90%;
+  }
+  #propose input[type="button"] {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 460px) {
+  #propose .judul h1 {
+    font-size: 30px;
+  }
 }
 
 footer {
@@ -316,6 +443,19 @@ footer #copyright {
   position: relative;
   background: #1d1f25;
   padding: 1px 0;
+}
+@media screen and (max-width: 875px) {
+  footer .wrapper {
+    width: 80%;
+  }
+  footer ul {
+    flex: 0 1 50%;
+  }
+}
+@media screen and (max-width: 375px) {
+  footer ul {
+    flex: 0 1 100%;
+  }
 }
 
 @keyframes berputar {
