@@ -2,6 +2,10 @@ a {
   color: #ec6955;
 }
 
+.clear {
+  clear: both;
+}
+
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -40,19 +44,18 @@ a {
   }
   #navbar nav li {
     float: none;
-    padding: 5px 0px;
+    padding: 7px 0px;
     text-align: center;
-    margin-top: 10px;
   }
   #navbar nav li a {
-    padding: 5px 5px 10px;
+    padding: 7px 5px 7px;
   }
   #navbar nav #burger-menu {
-    background: url(../img/navicon.png) no-repeat;
+    background: url(../img/navicon.png) no-repeat center;
     height: 40px;
     width: 40px;
+    margin-top: -31px;
     float: right;
-    margin-top: -35px;
     cursor: pointer;
   }
 }
@@ -308,6 +311,7 @@ a {
 }
 #blogs #blog-list .gambar {
   height: 200px;
+  width: 100%;
   overflow: hidden;
 }
 #blogs .label {
@@ -336,18 +340,6 @@ a {
 }
 #blogs .desc p {
   color: #818181;
-}
-@media screen and (max-width: 800px) {
-  #blogs #blog-list ul {
-    margin-bottom: 50px;
-  }
-  #blogs #blog-list li {
-    flex: 0 1 50%;
-    padding: 0 20px;
-  }
-  #blogs .desc {
-    margin-bottom: 20px;
-  }
 }
 
 #propose {
@@ -463,5 +455,3 @@ footer #copyright {
     transform: rotateY(360deg);
   }
 }
-
-/*# sourceMappingURL=style.css.map */
