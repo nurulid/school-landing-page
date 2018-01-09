@@ -1,4 +1,4 @@
-## shcool-landing-page
+## school-landing-page
 PSD to HTML, SASS, responsive, jQuery
 
 ## Credit
