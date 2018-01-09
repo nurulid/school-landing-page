@@ -1,5 +1,5 @@
 ## school-landing-page
-PSD to HTML
+PSD to HTML, SASS, responsive, jQuery
 
 ## Credit
 
