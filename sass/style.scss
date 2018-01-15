@@ -344,6 +344,11 @@ a{
             color: rgb(129, 129, 129);
         }
     }
+    @include mq(460px){
+        #blog-list li{
+            flex: 0 1 (100%);
+        }
+    }
 }
 
 // WHAT DO YOU PROPOSE
