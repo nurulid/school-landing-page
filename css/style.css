@@ -341,6 +341,11 @@ a {
 #blogs .desc p {
   color: #818181;
 }
+@media screen and (max-width: 460px) {
+  #blogs #blog-list li {
+    flex: 0 1 100%;
+  }
+}
 
 #propose {
   background: url(../img/what-do-you-propose-bg.jpg) no-repeat center center;
